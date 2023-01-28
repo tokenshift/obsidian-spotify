@@ -1,10 +1,10 @@
 {
-	"id": "spotify",
-	"name": "Spotify",
-	"version": "0.0.1",
-	"minAppVersion": "0.15.0",
-	"description": "Embed songs, albums and playlists from Spotify in your Obsidian notes.",
-	"author": "Nathan Clark",
-	"authorUrl": "https://github.com/tokenshift/obsidian-spotify",
-	"isDesktopOnly": false
+  "id": "spotify",
+  "name": "Spotify",
+  "version": "0.0.1",
+  "minAppVersion": "0.15.0",
+  "description": "Embed songs, albums and playlists from Spotify in your Obsidian notes.",
+  "author": "Nathan Clark",
+  "authorUrl": "https://github.com/tokenshift",
+  "isDesktopOnly": false
 }
