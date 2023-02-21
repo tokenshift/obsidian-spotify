@@ -1,15 +1,10 @@
-import axios from 'axios'
+import { requestUrl } from "obsidian"
 
 export const baseURL = 'https://open.spotify.com'
 
-export async function getEmbed (url: string) {
-  const client = axios.create({
-    baseURL
-  })
-
-  const { data } = await client.get('/oembed', {
-    params: { url }
-  })
-
-  return data
+export async function getEmbed (songUrl: string) {
+  const url = new URL('/oembed', baseURL)
+  url.searchParams.set('url', songUrl)
+  const response = await requestUrl(url.toString())
+  return response.json
 }
