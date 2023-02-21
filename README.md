@@ -3,11 +3,9 @@
 > **Warning:** This plugin is in development and should be
 > considered unstable! Always make a backup of your vault before testing out a new plugin.
 
-{% warning %}
-**Warning:** This plugin renders embed HTML provided by the Spotify API
+**Warning: This plugin renders embed HTML provided by the Spotify API
 (https://open.spotify.com). Only use it if you trust that spotify.com has not
-been compromised.
-{% endwarning %}
+been compromised.**
 
 Embed songs, albums and playlists from Spotify in your Obsidian notes.
 
