@@ -1,5 +1,5 @@
 import { MarkdownPostProcessorContext, Plugin, parseYaml } from 'obsidian'
-import { getEmbed, getEmbedIframe } from 'src/spotify'
+import { getEmbed } from 'src/spotify'
 
 export default class SpotifyPlugin extends Plugin {
 	async onload() {
@@ -9,8 +9,12 @@ export default class SpotifyPlugin extends Plugin {
 	async handleSpotifyCodeBlock (source: string, el: HTMLElement, ctx: MarkdownPostProcessorContext) {
 		const { url } = parseYaml(source)
 
-		const embed = await getEmbedIframe(url)
-		el.appendChild(embed)
+		const embed = await getEmbed(url)
+
+		const div = document.createElement('div')
+		div.classList.add('obsidian-spotify')
+		div.innerHTML = embed.html
+		el.appendChild(div)
 
 		// TODO: How are sessions/cookies handled for an iframe embed like this?
 		// I.e. how do I get the Spotify embed to recognize my login and not just
