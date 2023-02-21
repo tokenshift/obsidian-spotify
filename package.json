@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-spotify",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Embed songs, albums and playlists from Spotify in your Obsidian notes.",
 	"main": "main.js",
 	"scripts": {
